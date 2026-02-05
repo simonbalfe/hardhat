@@ -23,7 +23,7 @@ const SERVICES = [
       "Tested ad creatives",
       "Compelling offers",
     ],
-    image: "https://images.unsplash.com/photo-1542435503-956c469947f6?w=400&h=250&fit=crop",
+    image: "/images/roofer_writing.png",
   },
   {
     icon: BarChart3,
@@ -35,7 +35,7 @@ const SERVICES = [
       "A/B testing",
       "ROI tracking",
     ],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+    image: "/images/graph.png",
   },
 ];
 
