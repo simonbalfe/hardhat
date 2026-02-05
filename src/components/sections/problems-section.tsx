@@ -8,6 +8,9 @@ import {
   Users,
 } from "lucide-react";
 
+// Placeholder image for problems illustration
+const PROBLEMS_IMAGE = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop";
+
 const PROBLEMS = [
   {
     icon: Search,
@@ -65,6 +68,15 @@ export default function ProblemsSection() {
               These are the problems that hold roofing businesses back. We've
               built our system specifically to solve them.
             </p>
+          </div>
+
+          {/* Problems Illustration */}
+          <div className="mt-10 overflow-hidden rounded-xl border border-dark-gray">
+            <img
+              src={PROBLEMS_IMAGE}
+              alt="Business challenges illustration"
+              className="h-48 w-full object-cover lg:h-64"
+            />
           </div>
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

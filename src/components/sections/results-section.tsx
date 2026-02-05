@@ -63,26 +63,48 @@ export default function ResultsSection() {
           </div>
         </div>
 
+        {/* Meta Ads Manager Screenshot */}
+        <div className="border-b border-dark-gray p-6 lg:p-10">
+          <div className="relative mx-auto max-w-5xl">
+            {/* Glow effect behind image */}
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 via-amber-500/10 to-amber-500/5 blur-3xl" />
+
+            <div className="relative overflow-hidden rounded-xl border border-dark-gray bg-jet shadow-2xl shadow-black/50">
+              <div className="flex items-center gap-1.5 border-b border-dark-gray bg-obsidian px-4 py-2.5">
+                <div className="size-2.5 rounded-full bg-red-500/70" />
+                <div className="size-2.5 rounded-full bg-yellow-500/70" />
+                <div className="size-2.5 rounded-full bg-green-500/70" />
+                <span className="ml-3 text-xs text-mid-gray">
+                  Meta Ads Manager
+                </span>
+              </div>
+              <img
+                src="/images/meta_results.png"
+                alt="Meta Ads campaign overview showing active ad sets"
+                className="h-auto w-full"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Stats Grid */}
-        <div className="grid border-b border-dark-gray sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 border-b border-dark-gray lg:grid-cols-4">
           {STATS.map((stat, index) => (
             <div
               key={index}
-              className="border-b border-dark-gray p-8 text-center sm:border-r sm:last:border-r-0 lg:border-b-0"
+              className="border-b border-dark-gray p-6 text-center odd:border-r lg:border-b-0 lg:border-r lg:p-8 lg:last:border-r-0"
             >
-              <p className="text-4xl font-bold text-amber-500 lg:text-5xl">
+              <p className="text-3xl font-bold text-amber-500 lg:text-4xl">
                 {stat.value}
               </p>
-              <p className="text-foreground mt-2 text-lg font-medium">
-                {stat.label}
-              </p>
+              <p className="text-foreground mt-2 font-medium">{stat.label}</p>
               <p className="text-mid-gray text-sm">{stat.sublabel}</p>
             </div>
           ))}
         </div>
 
         {/* Breakdown */}
-        <div className="grid lg:grid-cols-2">
+        <div className="grid border-b border-dark-gray lg:grid-cols-2">
           {/* Jobs Breakdown */}
           <div className="border-b border-dark-gray p-8 lg:border-b-0 lg:border-r lg:p-12">
             <h3 className="text-foreground mb-6 text-xl font-semibold">
@@ -114,26 +136,45 @@ export default function ResultsSection() {
             </div>
           </div>
 
-          {/* Total Profit */}
-          <div className="flex flex-col items-center justify-center bg-gradient-to-br from-amber-500/10 to-orange-500/10 p-8 lg:p-12">
-            <p className="text-mid-gray mb-2 text-sm uppercase tracking-wider">
-              Total Profit Generated
-            </p>
-            <p className="text-foreground text-5xl font-bold lg:text-6xl">
-              £80,000<span className="text-amber-500">+</span>
-            </p>
-            <p className="text-mid-gray mt-2 text-center text-sm">
-              Once all jobs were completed
-            </p>
-
-            <div className="mt-8">
-              <Button asChild size="lg">
-                <a href="#contact">
-                  Get Results Like This
-                  <ArrowRight className="ml-2 size-4" />
-                </a>
-              </Button>
+          {/* Campaign Results Image */}
+          <div className="flex items-center justify-center p-6 lg:p-8">
+            <div className="w-full max-w-md overflow-hidden rounded-xl border border-amber-500/30 bg-jet shadow-2xl shadow-amber-500/10">
+              <div className="flex items-center gap-1.5 border-b border-dark-gray bg-obsidian px-4 py-2.5">
+                <div className="size-2.5 rounded-full bg-red-500/70" />
+                <div className="size-2.5 rounded-full bg-yellow-500/70" />
+                <div className="size-2.5 rounded-full bg-green-500/70" />
+                <span className="ml-3 text-xs text-mid-gray">
+                  Campaign Results
+                </span>
+              </div>
+              <img
+                src="/images/results.png"
+                alt="Meta Ads results - 52 leads at £7.12 per lead"
+                className="h-auto w-full"
+              />
             </div>
+          </div>
+        </div>
+
+        {/* Total Profit */}
+        <div className="flex flex-col items-center justify-center bg-gradient-to-br from-amber-500/10 to-orange-500/10 p-8 lg:p-12">
+          <p className="text-mid-gray mb-2 text-sm uppercase tracking-wider">
+            Total Profit Generated
+          </p>
+          <p className="text-foreground text-5xl font-bold lg:text-6xl">
+            £80,000<span className="text-amber-500">+</span>
+          </p>
+          <p className="text-mid-gray mt-2 text-center text-sm">
+            Once all jobs were completed
+          </p>
+
+          <div className="mt-8">
+            <Button asChild size="lg">
+              <a href="#contact">
+                Get Results Like This
+                <ArrowRight className="ml-2 size-4" />
+              </a>
+            </Button>
           </div>
         </div>
       </div>

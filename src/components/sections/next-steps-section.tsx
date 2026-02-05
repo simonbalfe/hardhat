@@ -10,6 +10,9 @@ import {
 
 import { Button } from "@/components/ui/button";
 
+// Placeholder image for onboarding
+const ONBOARDING_IMAGE = "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=400&fit=crop";
+
 const STEPS = [
   {
     icon: Image,
@@ -59,6 +62,17 @@ export default function NextStepsSection() {
             <p className="text-mid-gray mx-auto mt-4 max-w-2xl text-base lg:text-lg">
               Here's exactly what happens after you decide to work with us.
             </p>
+          </div>
+        </div>
+
+        {/* Onboarding Image */}
+        <div className="border-b border-dark-gray p-6 lg:p-8">
+          <div className="overflow-hidden rounded-xl border border-dark-gray">
+            <img
+              src={ONBOARDING_IMAGE}
+              alt="Easy onboarding process"
+              className="h-48 w-full object-cover lg:h-56"
+            />
           </div>
         </div>
 

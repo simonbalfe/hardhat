@@ -11,6 +11,7 @@ const SERVICES = [
       "Radius-based advertising",
       "Local market research",
     ],
+    image: "https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?w=400&h=250&fit=crop",
   },
   {
     icon: PenLine,
@@ -22,6 +23,7 @@ const SERVICES = [
       "Tested ad creatives",
       "Compelling offers",
     ],
+    image: "https://images.unsplash.com/photo-1542435503-956c469947f6?w=400&h=250&fit=crop",
   },
   {
     icon: BarChart3,
@@ -33,6 +35,7 @@ const SERVICES = [
       "A/B testing",
       "ROI tracking",
     ],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
   },
 ];
 
@@ -63,7 +66,15 @@ export default function ServicesSection() {
               key={index}
               className="border-b border-dark-gray p-8 lg:border-b-0 lg:border-r lg:last:border-r-0"
             >
-              <div className="mb-6 inline-flex rounded-xl bg-amber-500/10 p-4">
+              {/* Service Image */}
+              <div className="mb-6 overflow-hidden rounded-lg border border-dark-gray">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="h-40 w-full object-cover"
+                />
+              </div>
+              <div className="mb-4 inline-flex rounded-xl bg-amber-500/10 p-4">
                 <service.icon className="size-8 text-amber-500" />
               </div>
               <h3 className="text-foreground mb-3 text-xl font-semibold lg:text-2xl">

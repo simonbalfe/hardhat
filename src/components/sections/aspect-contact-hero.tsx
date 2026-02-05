@@ -1,5 +1,8 @@
 import { Facebook, Linkedin, Twitter } from "lucide-react";
 
+// Placeholder image for contact section
+const CONTACT_IMAGE = "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=400&fit=crop";
+
 const contactInfo = [
   {
     label: "General Inquiries",
@@ -27,6 +30,14 @@ export default function AspectContactHero() {
   return (
     <section className="overflow-hidden bg-obsidian px-2.5 lg:px-0">
       <div className="container px-0">
+        {/* Contact Hero Image */}
+        <div className="border-l border-r border-l-dark-gray border-r-dark-gray">
+          <img
+            src={CONTACT_IMAGE}
+            alt="Modern office workspace"
+            className="h-48 w-full object-cover lg:h-64"
+          />
+        </div>
         <div className="grid grid-cols-1 border-b border-l border-r border-b-dark-gray border-l-dark-gray border-r-dark-gray lg:grid-cols-2">
           <div className="items-center border-b border-b-dark-gray px-6 py-8 lg:border-b-0 lg:border-r lg:border-r-dark-gray lg:px-16 lg:py-16">
             <h2 className="text-foreground mb-2.5 text-3xl font-medium tracking-tight lg:text-4xl">

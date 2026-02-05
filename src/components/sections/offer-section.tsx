@@ -6,6 +6,9 @@ import {
   Star,
 } from "lucide-react";
 
+// Placeholder image for offer section
+const OFFER_IMAGE = "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop";
+
 const OFFER_ITEMS = [
   {
     icon: MessageSquare,
@@ -59,6 +62,17 @@ export default function OfferSection() {
               Everything you need to fill your calendar with qualified,
               ready-to-buy roofing leads.
             </p>
+          </div>
+        </div>
+
+        {/* Offer Image Banner */}
+        <div className="border-b border-dark-gray p-6 lg:p-8">
+          <div className="overflow-hidden rounded-xl border border-dark-gray">
+            <img
+              src={OFFER_IMAGE}
+              alt="Team collaboration and support"
+              className="h-48 w-full object-cover lg:h-64"
+            />
           </div>
         </div>
 

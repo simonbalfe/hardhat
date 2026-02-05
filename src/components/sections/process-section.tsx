@@ -1,5 +1,7 @@
 import { CalendarCheck, DollarSign, MessageSquare, Zap } from "lucide-react";
 
+const PROCESS_IMAGE = "/images/speed.png";
+
 const STEPS = [
   {
     step: "01",
@@ -53,6 +55,17 @@ export default function ProcessSection() {
               Our battle-tested process ensures only serious, qualified
               prospects end up on your calendar.
             </p>
+          </div>
+        </div>
+
+        {/* Process Image */}
+        <div className="border-b border-dark-gray p-8 lg:p-12">
+          <div className="mx-auto max-w-md overflow-hidden rounded-xl border border-dark-gray">
+            <img
+              src={PROCESS_IMAGE}
+              alt="Our lead generation process visualization"
+              className="h-auto w-full"
+            />
           </div>
         </div>
 

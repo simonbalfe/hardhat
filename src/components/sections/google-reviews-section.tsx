@@ -1,5 +1,8 @@
 import { ArrowUp, Search, Star, Trophy, Users } from "lucide-react";
 
+// Placeholder image for Google Reviews section
+const REVIEWS_IMAGE = "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=300&fit=crop";
+
 const BENEFITS = [
   {
     icon: ArrowUp,
@@ -31,6 +34,14 @@ export default function GoogleReviewsSection() {
   return (
     <section className="bg-obsidian px-2.5 lg:px-0">
       <div className="container border-x border-b border-dark-gray">
+        {/* Header Image */}
+        <div className="border-b border-dark-gray">
+          <img
+            src={REVIEWS_IMAGE}
+            alt="Happy customers giving reviews"
+            className="h-40 w-full object-cover lg:h-48"
+          />
+        </div>
         <div className="grid lg:grid-cols-2">
           {/* Left side - Info */}
           <div className="border-b border-dark-gray p-8 lg:border-b-0 lg:border-r lg:p-12">

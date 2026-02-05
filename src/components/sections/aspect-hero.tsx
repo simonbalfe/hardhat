@@ -27,11 +27,21 @@ const AspectHero = () => (
             </span>
           </div>
 
-          <h1 className="text-foreground text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+          <img
+            src="/images/hat.jpeg"
+            alt="Hard Hat Growth"
+            className="size-24 rounded-2xl shadow-2xl sm:size-28 md:size-32 lg:size-36"
+          />
+
+          <h1 className="text-foreground text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
+            Hard Hat Growth
+          </h1>
+
+          <p className="text-foreground text-2xl tracking-tight sm:text-3xl md:text-4xl lg:text-5xl">
             Stop Chasing Leads.
             <br />
             <span className="text-amber-500">Start Closing Jobs.</span>
-          </h1>
+          </p>
 
           <p className="font-inter-tight text-mid-gray max-w-xl text-base md:text-lg lg:text-xl">
             We generate high-quality, pre-qualified leads for roofing

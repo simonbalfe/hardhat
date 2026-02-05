@@ -5,6 +5,9 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 
+// Placeholder image for FAQ hero
+const FAQ_HERO_IMAGE = "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=400&fit=crop";
+
 type Category = "Support" | "Account" | "Features" | "Security" | "Other";
 
 interface FAQItem {
@@ -157,7 +160,15 @@ export const AspectFAQPage = () => {
     <section className="relative overflow-hidden bg-obsidian px-2.5 lg:px-0">
       <div className="container px-0">
         <div className="bg-jet border border-t-0 border-dark-gray">
-          <div className="px-6 py-12 text-center md:py-32">
+          {/* Hero Image */}
+          <div className="border-b border-dark-gray">
+            <img
+              src={FAQ_HERO_IMAGE}
+              alt="Customer support team"
+              className="h-48 w-full object-cover lg:h-64"
+            />
+          </div>
+          <div className="px-6 py-12 text-center md:py-20">
             <h1 className="text-foreground text-4xl font-medium tracking-tight sm:text-5xl">
               Frequently Asked Questions
             </h1>
