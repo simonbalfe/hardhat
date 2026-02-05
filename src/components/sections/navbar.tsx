@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-import ThemeToggle from "../ui/theme-toggle";
 
 interface NavbarProps {
   currentPath?: string;
@@ -85,12 +84,6 @@ export default function Navbar({ currentPath }: NavbarProps) {
               >
                 <Button size="sm">Get Started</Button>
               </a>
-
-              <div
-                className={`transition-opacity duration-300 ${isMenuOpen ? "max-lg:pointer-events-none max-lg:opacity-0" : "opacity-100"}`}
-              >
-                <ThemeToggle />
-              </div>
 
               {/* Hamburger Menu Button (Mobile Only) */}
               <button
