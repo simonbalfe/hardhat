@@ -1,4 +1,4 @@
-import { HardHat, Linkedin, Twitter } from "lucide-react";
+import { HardHat } from "lucide-react";
 
 const navigation = [
   { name: "Services", href: "#services" },
@@ -6,11 +6,6 @@ const navigation = [
   { name: "Results", href: "#results" },
   { name: "Our Team", href: "#team" },
   { name: "Contact", href: "#contact" },
-];
-
-const socialLinks = [
-  { icon: Twitter, href: "https://twitter.com" },
-  { icon: Linkedin, href: "https://linkedin.com" },
 ];
 
 
@@ -57,24 +52,10 @@ export function Footer() {
             </p>
             <a
               href="mailto:hello@hardhatgrowth.co.uk"
-              className="mb-6 block text-amber-500 transition-colors hover:text-amber-400"
+              className="text-amber-500 transition-colors hover:text-amber-400"
             >
               hello@hardhatgrowth.co.uk
             </a>
-
-            <div className="flex items-center gap-4">
-              {socialLinks.map(({ icon: Icon, href }) => (
-                <a
-                  key={href}
-                  href={href}
-                  target="_blank"
-                  aria-label={href}
-                  className="transition-colors hover:text-amber-500"
-                >
-                  <Icon size={20} />
-                </a>
-              ))}
-            </div>
           </div>
         </div>
 
