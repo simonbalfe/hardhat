@@ -11,7 +11,7 @@ const SERVICES = [
       "Radius-based advertising",
       "Local market research",
     ],
-    image: "https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?w=400&h=250&fit=crop",
+    image: "/images/local.png",
   },
   {
     icon: PenLine,
@@ -71,7 +71,7 @@ export default function ServicesSection() {
                 <img
                   src={service.image}
                   alt={service.title}
-                  className="h-40 w-full object-cover"
+                  className="h-56 w-full object-cover"
                 />
               </div>
               <div className="mb-4 inline-flex rounded-xl bg-amber-500/10 p-4">
