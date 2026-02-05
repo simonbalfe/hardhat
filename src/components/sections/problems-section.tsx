@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 // Placeholder image for problems illustration
-const PROBLEMS_IMAGE = "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=400&fit=crop";
+const PROBLEMS_IMAGE = "/images/angry.png";
 
 const PROBLEMS = [
   {
@@ -55,6 +55,21 @@ const PROBLEMS = [
   },
 ];
 
+function ProblemCard({ problem, className = "" }: { problem: typeof PROBLEMS[number]; className?: string }) {
+  const Icon = problem.icon;
+  return (
+    <div className={`group rounded-lg border border-dark-gray bg-jet p-5 transition-all hover:border-amber-500/30 hover:bg-jet/80 ${className}`}>
+      <div className="mb-3 inline-flex rounded-lg bg-amber-500/10 p-2.5">
+        <Icon className="size-5 text-amber-500" />
+      </div>
+      <h3 className="text-foreground mb-1.5 text-base font-semibold">
+        {problem.title}
+      </h3>
+      <p className="text-mid-gray text-sm">{problem.description}</p>
+    </div>
+  );
+}
+
 export default function ProblemsSection() {
   return (
     <section id="problems" className="bg-obsidian px-2.5 lg:px-0">
@@ -70,30 +85,33 @@ export default function ProblemsSection() {
             </p>
           </div>
 
-          {/* Problems Illustration */}
-          <div className="mt-10 overflow-hidden rounded-xl border border-dark-gray">
-            <img
-              src={PROBLEMS_IMAGE}
-              alt="Business challenges illustration"
-              className="h-48 w-full object-cover lg:h-64"
-            />
-          </div>
-
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {PROBLEMS.map((problem, index) => (
-              <div
-                key={index}
-                className="group rounded-lg border border-dark-gray bg-jet p-6 transition-all hover:border-amber-500/30 hover:bg-jet/80"
-              >
-                <div className="mb-4 inline-flex rounded-lg bg-amber-500/10 p-3">
-                  <problem.icon className="size-6 text-amber-500" />
-                </div>
-                <h3 className="text-foreground mb-2 text-lg font-semibold">
-                  {problem.title}
-                </h3>
-                <p className="text-mid-gray text-sm">{problem.description}</p>
-              </div>
+          {/* Problems grid with image in center */}
+          <div className="mt-10 grid gap-4 grid-cols-1 md:grid-cols-3">
+            {/* Top row - 3 problems */}
+            {PROBLEMS.slice(0, 3).map((problem, index) => (
+              <ProblemCard key={index} problem={problem} />
             ))}
+
+            {/* Middle row - problem, image, problem */}
+            <ProblemCard problem={PROBLEMS[3]} />
+
+            {/* Center image */}
+            <div className="overflow-hidden rounded-lg border border-dark-gray">
+              <img
+                src={PROBLEMS_IMAGE}
+                alt="Business challenges illustration"
+                className="aspect-square w-full h-full object-cover"
+              />
+            </div>
+
+            <ProblemCard problem={PROBLEMS[4]} />
+
+            {/* Bottom row - 2 problems */}
+            <ProblemCard problem={PROBLEMS[5]} />
+
+            <div className="hidden md:block" /> {/* Empty center cell */}
+
+            <ProblemCard problem={PROBLEMS[6]} />
           </div>
         </div>
       </div>
