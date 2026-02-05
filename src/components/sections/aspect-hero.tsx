@@ -19,8 +19,8 @@ const AspectHero = () => (
         <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 via-transparent to-orange-500/20" />
       </div>
 
-      <div className="grid gap-12 py-16 lg:grid-cols-[1fr_auto] lg:py-24 lg:pl-12">
-        <div className="flex flex-col items-start justify-center gap-6 lg:gap-8">
+      <div className="py-16 lg:py-24">
+        <div className="mx-auto flex max-w-3xl flex-col items-center justify-center gap-6 text-center lg:gap-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5">
             <span className="text-sm font-medium text-amber-500">
               Lead Generation for Roofing Businesses
@@ -48,7 +48,7 @@ const AspectHero = () => (
             ))}
           </ul>
 
-          <div className="flex flex-wrap gap-4 pt-2">
+          <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Button asChild size="lg">
               <a href="#contact" aria-label="Book a call">
                 Book a Strategy Call
@@ -60,45 +60,6 @@ const AspectHero = () => (
                 See Our Results
               </a>
             </Button>
-          </div>
-        </div>
-
-        <div className="flex items-center justify-center lg:w-[480px]">
-          <div className="grid grid-cols-3 gap-4">
-            {/* Team placeholder images */}
-            <div className="flex flex-col items-center gap-3">
-              <div className="size-28 overflow-hidden rounded-xl border-2 border-amber-500/30 bg-gradient-to-br from-slate-700 to-slate-800 sm:size-32 lg:size-36">
-                <div className="flex size-full items-center justify-center text-4xl text-slate-500">
-                  HU
-                </div>
-              </div>
-              <div className="text-center">
-                <p className="text-foreground text-sm font-semibold">Hardev</p>
-                <p className="text-mid-gray text-xs">CEO</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center gap-3">
-              <div className="size-28 overflow-hidden rounded-xl border-2 border-amber-500/30 bg-gradient-to-br from-slate-700 to-slate-800 sm:size-32 lg:size-36">
-                <div className="flex size-full items-center justify-center text-4xl text-slate-500">
-                  CB
-                </div>
-              </div>
-              <div className="text-center">
-                <p className="text-foreground text-sm font-semibold">Charles</p>
-                <p className="text-mid-gray text-xs">CMO</p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center gap-3">
-              <div className="size-28 overflow-hidden rounded-xl border-2 border-amber-500/30 bg-gradient-to-br from-slate-700 to-slate-800 sm:size-32 lg:size-36">
-                <div className="flex size-full items-center justify-center text-4xl text-slate-500">
-                  SB
-                </div>
-              </div>
-              <div className="text-center">
-                <p className="text-foreground text-sm font-semibold">Simon</p>
-                <p className="text-mid-gray text-xs">CTO</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

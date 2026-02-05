@@ -2,26 +2,23 @@ const TEAM = [
   {
     name: "Hardev Uppal",
     role: "CEO",
-    initials: "HU",
+    photo: "/images/hardev.jpeg",
     description:
       "Leading strategy and business development, ensuring our clients get the best results possible.",
-    gradient: "from-amber-500 to-orange-600",
   },
   {
-    name: "Charles Banks",
+    name: "Joe Banks",
     role: "CMO",
-    initials: "CB",
+    photo: "/images/joe.jpeg",
     description:
       "Heading up marketing and ad campaigns, crafting high-converting copy that drives leads.",
-    gradient: "from-blue-500 to-purple-600",
   },
   {
     name: "Simon Balfe",
     role: "CTO",
-    initials: "SB",
+    photo: "/images/simon.jpeg",
     description:
       "Building and optimizing the tech stack that powers our lead generation systems.",
-    gradient: "from-green-500 to-teal-600",
   },
 ];
 
@@ -54,13 +51,13 @@ export default function TeamSection() {
               key={index}
               className="border-b border-dark-gray p-8 text-center md:border-b-0 md:border-r md:last:border-r-0 lg:p-12"
             >
-              {/* Avatar Placeholder */}
+              {/* Avatar */}
               <div className="mx-auto mb-6">
-                <div
-                  className={`mx-auto flex size-32 items-center justify-center rounded-2xl bg-gradient-to-br ${member.gradient} text-4xl font-bold text-white lg:size-40`}
-                >
-                  {member.initials}
-                </div>
+                <img
+                  src={member.photo}
+                  alt={member.name}
+                  className="mx-auto size-32 rounded-2xl object-cover lg:size-40"
+                />
               </div>
 
               <h3 className="text-foreground text-xl font-semibold">

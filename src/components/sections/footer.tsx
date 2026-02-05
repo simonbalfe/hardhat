@@ -13,10 +13,6 @@ const socialLinks = [
   { icon: Linkedin, href: "https://linkedin.com" },
 ];
 
-const legal = [
-  { name: "Privacy Policy", href: "/privacy" },
-  { name: "Terms of Service", href: "/terms" },
-];
 
 export function Footer() {
   return (
@@ -60,10 +56,10 @@ export function Footer() {
               Ready to grow your roofing business?
             </p>
             <a
-              href="mailto:hello@hardhatgrowth.com"
+              href="mailto:hello@hardhatgrowth.co.uk"
               className="mb-6 block text-amber-500 transition-colors hover:text-amber-400"
             >
-              hello@hardhatgrowth.com
+              hello@hardhatgrowth.co.uk
             </a>
 
             <div className="flex items-center gap-4">
@@ -83,22 +79,10 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="bg-jet grid gap-2 border-l border-r border-dark-gray px-6 py-4 sm:grid-cols-2 lg:px-8">
+        <div className="border-l border-r border-dark-gray px-6 py-4 lg:px-8">
           <p className="text-mid-gray text-xs">
             © {new Date().getFullYear()} Hard Hat Growth. All rights reserved.
           </p>
-
-          <div className="flex flex-col gap-2 sm:flex-row sm:justify-end">
-            {legal.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-mid-gray text-xs underline hover:text-foreground"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
         </div>
       </div>
     </footer>

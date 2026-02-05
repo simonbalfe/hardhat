@@ -97,7 +97,7 @@ export default function NextStepsSection() {
 
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg">
-                <a href="mailto:hello@hardhatgrowth.com">
+                <a href="mailto:hello@hardhatgrowth.co.uk">
                   Book Your Strategy Call
                   <ArrowRight className="ml-2 size-4" />
                 </a>
