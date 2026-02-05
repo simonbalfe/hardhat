@@ -6,8 +6,7 @@ import {
   Star,
 } from "lucide-react";
 
-// Placeholder image for offer section
-const OFFER_IMAGE = "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop";
+const OFFER_IMAGE = "/images/gemini.png";
 
 const OFFER_ITEMS = [
   {

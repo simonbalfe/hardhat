@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 // Placeholder image for onboarding
-const ONBOARDING_IMAGE = "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=400&fit=crop";
+const ONBOARDING_IMAGE = "/images/roofer.png";
 
 const STEPS = [
   {
@@ -111,7 +111,7 @@ export default function NextStepsSection() {
 
             <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg">
-                <a href="mailto:hello@hardhatgrowth.co.uk">
+                <a href="https://calendly.com/hardevuppal2/30min?month=2026-02" target="_blank" rel="noopener noreferrer">
                   Book Your Strategy Call
                   <ArrowRight className="ml-2 size-4" />
                 </a>

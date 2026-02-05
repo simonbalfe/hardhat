@@ -60,7 +60,7 @@ const AspectHero = () => (
 
           <div className="flex flex-wrap justify-center gap-4 pt-2">
             <Button asChild size="lg">
-              <a href="#contact" aria-label="Book a call">
+              <a href="https://calendly.com/hardevuppal2/30min?month=2026-02" target="_blank" rel="noopener noreferrer" aria-label="Book a call">
                 Book a Strategy Call
                 <ArrowRight className="ml-2 size-4" />
               </a>
