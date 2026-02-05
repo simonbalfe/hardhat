@@ -1,26 +1,26 @@
-export const SITE_TITLE = "Aspect - Modern Astro Template";
+export const SITE_TITLE = "Hard Hat Growth | Lead Generation for Roofing Businesses";
 export const SITE_DESCRIPTION =
-  "A modern, fully featured Astro template built with Shadcn/UI, TailwindCSS and TypeScript, perfect for your next web application.";
+  "We help roofing businesses generate high-quality leads, book qualified appointments, and close more jobs with our proven lead generation and appointment setting system.";
 
 export const SITE_METADATA = {
   title: {
     default: SITE_TITLE,
-    template: "%s | Aspect",
+    template: "%s | Hard Hat Growth",
   },
   description: SITE_DESCRIPTION,
   keywords: [
-    "Astro",
-    "React",
-    "JavaScript",
-    "TypeScript",
-    "TailwindCSS",
-    "Template",
-    "Shadcn/UI",
-    "Web Development",
+    "Roofing Leads",
+    "Lead Generation",
+    "Roofing Marketing",
+    "Appointment Setting",
+    "Roofing Business Growth",
+    "Google Ads for Roofers",
+    "Facebook Ads for Roofers",
+    "Roofing Contractors",
   ],
-  authors: [{ name: "Aspect Team" }],
-  creator: "Aspect Team",
-  publisher: "Aspect",
+  authors: [{ name: "Hard Hat Growth" }],
+  creator: "Hard Hat Growth",
+  publisher: "Hard Hat Growth",
   robots: {
     index: true,
     follow: true,
@@ -39,13 +39,13 @@ export const SITE_METADATA = {
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    siteName: "Aspect",
+    siteName: "Hard Hat Growth",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Aspect - Modern Astro Template",
+        alt: "Hard Hat Growth - Lead Generation for Roofing Businesses",
       },
     ],
   },
@@ -54,6 +54,6 @@ export const SITE_METADATA = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: ["/og-image.jpg"],
-    creator: "@shadcnblocks",
+    creator: "@hardhatgrowth",
   },
 };

@@ -1,4 +1,13 @@
+import { ArrowRight, CheckCircle } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
+
+const BENEFITS = [
+  "Qualified, High-Intent Leads",
+  "Full Appointment Setting",
+  "Google Review Campaigns",
+  "Data-Driven Optimization",
+];
 
 const AspectHero = () => (
   <section
@@ -6,50 +15,90 @@ const AspectHero = () => (
     className="relative overflow-hidden bg-obsidian px-2.5 lg:px-0"
   >
     <div className="container relative border-l border-r border-l-dark-gray border-r-dark-gray px-5">
-      <div className="pointer-events-none absolute inset-0 flex size-full items-center justify-center">
-        <img
-          src="/images/homepage/hero-background.webp"
-          alt="Hero background"
-          className="size-full object-cover"
-          loading="lazy"
-        />
+      <div className="pointer-events-none absolute inset-0 flex size-full items-center justify-center opacity-30">
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 via-transparent to-orange-500/20" />
       </div>
 
-      <div className="grid gap-12 py-12 lg:grid-cols-[1fr_auto] lg:py-20 lg:pl-12">
-        <div className="flex flex-col items-start justify-center gap-5 lg:gap-8">
+      <div className="grid gap-12 py-16 lg:grid-cols-[1fr_auto] lg:py-24 lg:pl-12">
+        <div className="flex flex-col items-start justify-center gap-6 lg:gap-8">
+          <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-4 py-1.5">
+            <span className="text-sm font-medium text-amber-500">
+              Lead Generation for Roofing Businesses
+            </span>
+          </div>
+
           <h1 className="text-foreground text-3xl tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-            All Your Financial Accounts in One Unified Dashboard
+            Stop Chasing Leads.
+            <br />
+            <span className="text-amber-500">Start Closing Jobs.</span>
           </h1>
 
-          <p className="font-inter-tight text-mid-gray text-base md:text-lg lg:text-xl">
-            Aggregate every bank, subsidiary, and currency in real time. Monitor
-            balances, track cash flow, and gain actionable insights—all without
-            juggling multiple logins.
+          <p className="font-inter-tight text-mid-gray max-w-xl text-base md:text-lg lg:text-xl">
+            We generate high-quality, pre-qualified leads for roofing
+            contractors. Our team handles everything from ads to appointment
+            booking—so you can focus on what you do best.
           </p>
 
-          <div className="flex flex-wrap gap-4">
-            <Button asChild>
-              <a href="/pricing" aria-label="Try for free">
-                Try for free
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {BENEFITS.map((benefit) => (
+              <li key={benefit} className="flex items-center gap-2">
+                <CheckCircle className="size-5 text-amber-500" />
+                <span className="text-foreground text-sm">{benefit}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="flex flex-wrap gap-4 pt-2">
+            <Button asChild size="lg">
+              <a href="#contact" aria-label="Book a call">
+                Book a Strategy Call
+                <ArrowRight className="ml-2 size-4" />
               </a>
             </Button>
-            <Button variant="secondary" asChild>
-              <a href="/pricing" aria-label="Book a demo">
-                Book a demo
+            <Button variant="secondary" size="lg" asChild>
+              <a href="#results" aria-label="See our results">
+                See Our Results
               </a>
             </Button>
           </div>
         </div>
-        <div className="bg-overlay-gray inline-block w-full rounded-md p-3 sm:p-4 lg:w-[522px] lg:rounded-md">
-          <div className="relative aspect-[522/572] w-full overflow-hidden rounded-md">
-            <img
-              src="/images/homepage/aspect-hero-image.webp"
-              alt="Aspect product interface showing connected banks"
-              className="absolute inset-0 h-full w-full object-cover object-left-top"
-              loading="lazy"
-              width={522}
-              height={572}
-            />
+
+        <div className="flex items-center justify-center lg:w-[480px]">
+          <div className="grid grid-cols-3 gap-4">
+            {/* Team placeholder images */}
+            <div className="flex flex-col items-center gap-3">
+              <div className="size-28 overflow-hidden rounded-xl border-2 border-amber-500/30 bg-gradient-to-br from-slate-700 to-slate-800 sm:size-32 lg:size-36">
+                <div className="flex size-full items-center justify-center text-4xl text-slate-500">
+                  HU
+                </div>
+              </div>
+              <div className="text-center">
+                <p className="text-foreground text-sm font-semibold">Hardev</p>
+                <p className="text-mid-gray text-xs">CEO</p>
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <div className="size-28 overflow-hidden rounded-xl border-2 border-amber-500/30 bg-gradient-to-br from-slate-700 to-slate-800 sm:size-32 lg:size-36">
+                <div className="flex size-full items-center justify-center text-4xl text-slate-500">
+                  CB
+                </div>
+              </div>
+              <div className="text-center">
+                <p className="text-foreground text-sm font-semibold">Charles</p>
+                <p className="text-mid-gray text-xs">CMO</p>
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <div className="size-28 overflow-hidden rounded-xl border-2 border-amber-500/30 bg-gradient-to-br from-slate-700 to-slate-800 sm:size-32 lg:size-36">
+                <div className="flex size-full items-center justify-center text-4xl text-slate-500">
+                  SB
+                </div>
+              </div>
+              <div className="text-center">
+                <p className="text-foreground text-sm font-semibold">Simon</p>
+                <p className="text-mid-gray text-xs">CTO</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
